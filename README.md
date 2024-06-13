@@ -14,7 +14,7 @@ ff.samsedrain.com.np
 **Endpoint:** `/info`  
 **Description:** Fetches basic information about a player.  
 **Parameters:**
-- `uid` (string, required): User ID
+- `uid` (integer, required): User ID
 - `password` (string, required): User password
 - `server` (string, required): Server code (e.g., "sg")
 
