@@ -4,8 +4,8 @@
 This API service provides detailed information about players, maps, wishlists, and ban status in the game. Below are the endpoints and their respective functionalities.
 
 ## Base URL
-```
-https://ff.samsedrain.com.np
+```url
+ff.samsedrain.com.np
 ```
 
 ## Endpoints
