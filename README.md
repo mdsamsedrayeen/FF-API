@@ -418,8 +418,39 @@ GET https://ff.samsedrain.com.np/isbanned?uid=12345678&password={API_KEY}&server
 ```
 **Note:** The response will be `0` if the user is not banned and `1` if the user is banned.
 
+### 6. Profile Board
+
+**Endpoint:** `/profile`
+
+**Description:** Generates a profile board image for a player.
+
+**Parameters:**
+- `password` (string): Your API key.
+- `banner` (integer): Banner ID to be used on the profile board.
+- `avatar` (integer): Avatar ID to be used on the profile board.
+- `name` (string): Player's name to be displayed on the profile board.
+- `level` (integer): Player's level.
+- `uid` (string): User ID.
+
+**Example Request:**
+```
+GET https://ff.samsedrain.com.np/profile?password=YOUR_KEY&banner=901040014&avatar=902000154&name=%EF%BC%B3%EF%BC%B8%EF%BC%B3_%EF%BC%AB%EF%BC%A9%EF%BC%A2%EF%BC%AF%EA%94%AA&level=10&uid=12345678
+```
+
+**Response:**
+This endpoint returns a `.webp` image that contains the player's profile board with the specified banner, avatar, name, level, and user ID.
+
+**Usage Example:**
+To retrieve and display the profile board image, you can use the following curl command:
+
+```sh
+curl -O "https://ff.samsedrain.com.np/profile?password=YOUR_KEY&banner=901040014&avatar=902000154&name=%EF%BC%B3%EF%BC%B8%EF%BC%B3_%EF%BC%AB%EF%BC%A9%EF%BC%A2%EF%BC%AF%EA%94%AA&level=10&uid=12345678"
+```
+
+Make sure to replace `YOUR_KEY` with your actual API key. The command will save the profile board image in the current directory.
+
 ## Authentication
-Each endpoint requires authentication using the `uid` and `password` parameters. Make sure to pass these parameters correctly in your requests.
+Each endpoint requires authentication using the `password` parameters. Make sure to pass these parameters correctly in your requests.
 
 ## Errors
 All endpoints will return appropriate HTTP status codes to indicate success or failure. Common HTTP status codes include:
@@ -428,7 +459,7 @@ All endpoints will return appropriate HTTP status codes to indicate success or f
 - `401 Unauthorized`: Authentication failed.
 - `404 Not Found`: The requested resource was not found.
 - `500 Internal Server Error`: An error occurred on the server.
-- Note: Temprory We use error key in response json for error and message key as a custom error message all status code is 200 but soon it will be changed 
+- Note: Temporary We use error key in response json for error and message key as a custom error message all status code is 200 but soon it will be changed 
 
 ## Caching
 The `cached` field in the response indicates whether the data was retrieved from the cache. This can help in determining if the data is the latest or from a previous request.
