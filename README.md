@@ -11,14 +11,12 @@ ff.samsedrain.com.np
 ## Endpoints
 
 ### 1. Player Info
-**Endpoint:** `/info`
-
-**Description:** Fetches basic information about a player.
-
+**Endpoint:** `/info`  
+**Description:** Fetches basic information about a player.  
 **Parameters:**
-- `uid` (string): User ID
-- `password` (string): User password
-- `server` (string): Server code (e.g., "sg")
+- `uid` (string, required): User ID
+- `password` (string, required): User password
+- `server` (string, required): Server code (e.g., "sg")
 
 **Example Request:**
 ```
@@ -26,6 +24,7 @@ GET https://ff.samsedrain.com.np/info?uid=12345678&password={API_KEY}&server=sg
 ```
 
 **Response:**
+* 200 OK: Returns JSON data with the player's information:
 ```json
 {
   "cached": true,
@@ -78,14 +77,12 @@ GET https://ff.samsedrain.com.np/info?uid=12345678&password={API_KEY}&server=sg
 ```
 
 ### 2. Full Player Info
-**Endpoint:** `/playerinfo`
-
-**Description:** Fetches detailed information about a player.
-
+**Endpoint:** `/playerinfo`  
+**Description:** Fetches detailed information about a player.  
 **Parameters:** 
-- `uid` (string): User ID
-- `password` (string): User password
-- `server` (string): Server code (e.g., "sg")
+- `uid` (string, required): User ID
+- `password` (string, required): User password
+- `server` (string, required): Server code (e.g., "sg")
 
 **Example Request:**
 ```
@@ -93,6 +90,7 @@ GET https://ff.samsedrain.com.np/playerinfo?uid=12345678&password={API_KEY}&serv
 ```
 
 **Response:**
+* 200 OK: Returns JSON data with the player's information:
 ```json
 {
   "cached": false,
@@ -333,14 +331,12 @@ GET https://ff.samsedrain.com.np/playerinfo?uid=12345678&password={API_KEY}&serv
 ```
 
 ### 3. Map Info
-**Endpoint:** `/mapinfo`
-
-**Description:** Fetches information about a specific map.
-
+**Endpoint:** `/mapinfo`  
+**Description:** Fetches information about a specific map.  
 **Parameters:**
-- `map` (string): Map code
-- `password` (string): User password
-- `server` (string): Server code (e.g., "sg")
+- `map` (string, required): Map code
+- `password` (string, required): User password
+- `server` (string, required): Server code (e.g., "sg")
 
 **Example Request:**
 ```
@@ -348,6 +344,7 @@ GET https://ff.samsedrain.com.np/mapinfo?map=FFMAPCODE&password={API_KEY}&server
 ```
 
 **Response:**
+* 200 OK: Returns JSON data with the player's information:
 ```json
 {
   "message": {
@@ -367,14 +364,12 @@ GET https://ff.samsedrain.com.np/mapinfo?map=FFMAPCODE&password={API_KEY}&server
 ```
 
 ### 4. Wishlist Info
-**Endpoint:** `/wishlist`
-
-**Description:** Fetches the wishlist items of a player.
-
+**Endpoint:** `/wishlist`  
+**Description:** Fetches the wishlist items of a player.  
 **Parameters:**
-- `uid` (string): User ID
-- `password` (string): User password
-- `server` (string): Server code (e.g., "sg")
+- `uid` (string, required): User ID
+- `password` (string, required): User password
+- `server` (string, required): Server code (e.g., "sg")
 
 **Example Request:**
 ```
@@ -382,6 +377,7 @@ GET https://ff.samsedrain.com.np/wishlist?uid=12345678&password={API_KEY}&server
 ```
 
 **Response:**
+* 200 OK: Returns JSON data with the player's information:
 ```json
 {
   "message": {
@@ -396,14 +392,12 @@ GET https://ff.samsedrain.com.np/wishlist?uid=12345678&password={API_KEY}&server
 ```
 
 ### 5. Ban Check
-**Endpoint:** `/isbanned`
-
-**Description:** Checks if a player is banned.
-
+**Endpoint:** `/isbanned`  
+**Description:** Checks if a player is banned.  
 **Parameters:**
-- `uid` (string): User ID
-- `password` (string): User password
-- `server` (string): Server code (e.g., "sg")
+- `uid` (string, required): User ID
+- `password` (string, required): User password
+- `server` (string, required): Server code (e.g., "sg")
 
 **Example Request:**
 ```
@@ -411,6 +405,7 @@ GET https://ff.samsedrain.com.np/isbanned?uid=12345678&password={API_KEY}&server
 ```
 
 **Response:**
+* 200 OK: Returns JSON data with the player's information:
 ```json
 {
   "message": 0
@@ -420,17 +415,15 @@ GET https://ff.samsedrain.com.np/isbanned?uid=12345678&password={API_KEY}&server
 
 ### 6. Profile Board
 
-**Endpoint:** `/profile`
-
-**Description:** Generates a profile board image for a player.
-
+**Endpoint:** `/profile`  
+**Description:** Generates a profile board image for a player.  
 **Parameters:**
-- `password` (string): Your API key.
-- `banner` (integer): Banner ID to be used on the profile board.
-- `avatar` (integer): Avatar ID to be used on the profile board.
-- `name` (string): Player's name to be displayed on the profile board.
-- `level` (integer): Player's level.
-- `uid` (string): User ID.
+- `password` (string, required): Your API key.
+- `banner` (integer, required): Banner ID to be used on the profile board.
+- `avatar` (integer, required): Avatar ID to be used on the profile board.
+- `name` (string, required): Player's name to be displayed on the profile board.
+- `level` (integer, required): Player's level.
+- `uid` (string, required): User ID.
 
 **Example Request:**
 ```
