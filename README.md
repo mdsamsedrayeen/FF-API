@@ -444,7 +444,7 @@ This endpoint returns a `.webp` image that contains the player's profile board w
 To retrieve and display the profile board image, you can use the following curl command:
 
 ```sh
-curl -O "https://ff.samsedrain.com.np/profile?password=YOUR_KEY&banner=901040014&avatar=902000154&name=%EF%BC%B3%EF%BC%B8%EF%BC%B3_%EF%BC%AB%EF%BC%A9%EF%BC%A2%EF%BC%AF%EA%94%AA&level=10&uid=12345678"
+curl -O "https://ff.samsedrain.com.np/profile?password=YOUR_KEY&banner=901040014&avatar=902000154&name=Example_Name&level=10&uid=12345678"
 ```
 
 Make sure to replace `YOUR_KEY` with your actual API key. The command will save the profile board image in the current directory.
